@@ -71,17 +71,18 @@ export const Carrito = () => {
         </table>
         <hr className="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700" />
 
-        <div className="flex justify-end">
+        <div className="flex justify-end ">
           <div>
-            <p className="text-right text-lg font-bold">TOTAL</p>
+            <p className="text-right text-lg font-bold ">TOTAL</p>
           </div>
           <div>
             <p className=" px-3 text-right text-lg font-bold text-yellow-500">10.5</p>
           </div>
         </div>
       </div>
-
-      <div className="mt-4">
+      
+      {/* <div className="flex justify-end "> */}
+      <div className="mt-4 ">
         <div className="flex mb-2">
           <button className="w-1/2 bg-gray-300 hover:bg-blue-400 text-gray-600 font-bold py-2 px-4 mr-2">
             DESCUENTO EMPLEADOS
@@ -96,6 +97,8 @@ export const Carrito = () => {
           CODIGO PROMOCIONAL
         </button>
       </div>
+      {/* </div> */}
+
     </div>
   );
 };

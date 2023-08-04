@@ -27,69 +27,86 @@ export const Shop = ({ products }) => {
               <th scope="col" className="px-6 py-3">
                 REFRIGERADOS
               </th>
+              <th scope="col" className="px-6 py-3">
+                <img
+                  src="./src/assets/images/icon-aplicaciones.svg"
+                  alt="icons"
+                  className="h-5"
+                />
+              </th>
             </tr>
           </div>
-
-          {/* <tbody>
-            <tr>
-              <td className="px-4 py-3">
-                <img
-                  className="h-auto max-w-full rounded-lg"
-                  src="./src/assets/images/postobon-pina.jpg"
-                  alt="Bebidas"
-                />
-              </td> */}
-          {/* Coloca las otras celdas de la fila según corresponda */}
-          {/* </tr>
-          </tbody> */}
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {products.map((product, index) => (
               <div key={index}>
                 <img
-                  className="h-auto max-w-full rounded-lg max-h-28"
+                  className="h-auto max-w-full max-h-28"
                   src={product.image}
                   alt=""
                 />
-                <div className="text-lg text-gray-600 font-bold" >
+                <div className="text-lg text-gray-600 font-bold">
                   <p>{product.name}</p>
                   <p>{product.tax + " CAD"}</p>
                 </div>
               </div>
             ))}
+
+            <img
+              className="h-auto max-w-full max-h-28"
+              src="./src/assets/images/flecha-izquierda.png"
+              alt="Flecha izquierda"
+            />
           </div>
-
-
         </table>
-        <hr className="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700" />
-
-        <div className="flex justify-end">
-          <div>
-            <p className="text-right text-lg font-bold">TOTAL</p>
-          </div>
-          <div>
-            <p className=" px-3 text-right text-lg font-bold text-yellow-500">
-              10.5
-            </p>
-          </div>
-        </div>
       </div>
 
-      <div className="mt-4">
-        <div className="flex mb-2">
-          <button className="w-1/2 bg-gray-300 hover:bg-blue-400 text-gray-600 font-bold py-2 px-4 mr-2">
-            DESCUENTO EMPLEADOS
-          </button>
+      {/* --------------------------------- */}
+      <div className="mt-4  flex ">
 
-          <button className="w-1/2 bg-gray-300 hover:bg-blue-400 text-gray-600 font-bold py-2 px-4 mr-2">
-            VISTA CLIENTE
+        <div className="w-3/4">
+          <div className="flex mb-2 h-20">
+            <button className="w-1/3 bg-gray-300 hover:bg-blue-400 text-gray-600 py-2 px-4 mr-2 flex items-center justify-center">
+              <img className="h-16" src="./src/assets/images/pngwing.com.png" alt="" />
+            </button>
+
+            <button className="w-1/3 bg-gray-300 hover:bg-blue-400 text-gray-600 py-2 px-4 mr-2 flex items-center justify-center">
+              <img className="h-auto" src="./src/assets/images/visa.png" alt="" />
+            </button>
+
+            <button className="w-1/3 bg-gray-300 hover:bg-blue-400 text-gray-600 py-2 px-4 mr-2 flex items-center justify-center">
+              <img className="h-16" src="./src/assets/images/mastercard.png" alt="" />
+            </button>
+          </div>
+
+          <div className="flex mb-2">
+            <button className="w-1/3 bg-gray-300 hover:bg-blue-400 text-gray-600 py-2 px-4 mr-2 flex items-center justify-center">
+              <img className="h-16" src="./src/assets/images/uber-eats.jpg" alt="" />
+            </button>
+
+            <button className="w-1/3 bg-gray-300 hover:bg-blue-400 text-gray-600 py-2 px-4 mr-2 flex items-center justify-center">
+              <img  className="h-16" src="./src/assets/images/tarjeta-de-debito.png" alt="" />
+            </button>
+
+            <button className="w-1/3 bg-gray-300 hover:bg-blue-400 text-gray-600 py-2 px-4 mr-2 flex items-center justify-center ">
+              <img
+                src="./src/assets/images/sum-icon.png"
+                alt="suma"
+                className="h-5"
+              />
+            </button>
+          </div>
+
+        </div>
+        {/* ---------------- */}
+        <div className="w-1/4 bg-gray-600  hover:bg-blue-400 flex items-center justify-center ">
+          <button className=" text-yellow-300 text-xl py-2 px-4 mr-2 ">
+            PAGAR
           </button>
         </div>
 
-        <button className="min-w-full bg-gray-300 hover:bg-blue-400 text-gray-600 font-bold py-2 px-4">
-          CODIGO PROMOCIONAL
-        </button>
       </div>
+      {/*------------------------------------- */}
     </div>
   );
 };

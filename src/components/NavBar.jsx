@@ -24,6 +24,11 @@ export const NavBar = () => {
         <div className="relative ml-3 ">
             <img src='src\assets\images\perfil.png' className="h-8 w-8  "/>
         </div>
+
+        <div className="relative ml-3 ">
+            <img src='src\assets\images\tres-puntos.png' className="h-8 w-8  "/>
+        </div>
+
       </div>
     </div>
 
