@@ -1,17 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
+import { useSelector } from "react-redux/es/hooks/useSelector"; //al declarar esta linea deja de renderizar toda la pagina
+import { addProduct } from "../redux/productsSlice";
 
 export const Carrito = () => {
-  const products = [
-    { name: "COCA-COLA", tax: 3.5 },
-    { name: "MANZANA POSTOBON", tax: 3.5 },
-    { name: "NARANJA POSTOBON", tax: 3.5 },
-  ];
+  // const productsSlice = useSelector((state) => state.products);
+  // console.log("ProductsSlice CARRITO------>",productsSlice)
+  const products = useSelector((state) => state.products.products);
+
+
+  // const products = [
+  //   { name: "COCA-COLA", tax: 3.5 },
+  //   { name: "MANZANA POSTOBON", tax: 3.5 },
+  //   { name: "NARANJA POSTOBON", tax: 3.5 },
+  // ];
 
   return (
     <div className="max-w-min ml-10 mt-10 p-2 bg-white shadow-md">
       {/* <h2 className="text-xl font-semibold mb-4">Carrito de Compras</h2> */}
 
       <div className="overflow-x-auto ">
+    {/* <h3>{productsSlice.products.length}</h3> */}
         <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
 
           <thead className="text-xs text-gray-700 uppercase bg-gray-50 ">
@@ -30,9 +38,8 @@ export const Carrito = () => {
               </th>
             </tr>
           </thead>
-
           <tbody>
-            {products.map((product, index) => (
+            {products?.map((product, index) => (
               <tr className="bg-white  dark:border-gray-700" key={index}>
                 
                 <td className="px-1 py-1 font-medium text-gray-900 whitespace-nowrap ">
@@ -42,13 +49,13 @@ export const Carrito = () => {
                 </td>
 
                 <td className="px-6 py-1 font-medium text-gray-900 ">
-                  <div className="w-24 break-word">{product.name}</div>
+                  <div className="w-24 break-word">{product?.name}</div>
                 </td>
                 <td
                   scope="row"
                   className="px-6 py-1 font-medium text-gray-900 whitespace-nowrap "
                 >
-                  {product.tax}
+                  {product?.tax}
                 </td>
                 
                 <td
